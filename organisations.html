@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organizations - RoboSync</title>
+    <link rel="icon" type="image/x-icon" href="https://cdn.discordapp.com/attachments/1191805915314270218/1191812716290121893/RS.jpeg?ex=65a6cd16&is=65945816&hm=5c98f3ea9ada451e5996dded67a0209a558abf9f8eeca814ca872691ad80fe37&">
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        header {
+            color: Red;
+            font-family: Arial;
+            font-weight: Bold;
+            font-size: 40px;
+        }
+
+        main {
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        .organization-card {
+            background-color: #333; /* dark red */
+            padding: 20px;
+            margin: 10px;
+            border-radius: 8px;
+            width: 300px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .organization-card h2 {
+            color: Red;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .organization-card p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .organization-card a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            background-color: #555; /* darker red */
+            border-radius: 4px;
+            display: inline-block;
+        }
+
+        .organization-card a:hover {
+            background-color: #777; /* even darker red */
+        }
+
+        button {
+            background-color: gray; /* dark blue */
+            color: #fff;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: darkgrey; /* darker blue */
+        }
+
+        footer {
+            background-color: black;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            color: darkred;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <br>
+    <header>Organizations</header>
+    <main>
+        <div class="organization-card">
+            <h2>Create Your Group</h2>
+            <p>Start your own group and manage members, roles, and activities.</p>
+            <a href="creategroup.html" class="dashboard-button">Create Group</a>
+        </div>
+
+        <div class="organization-card">
+            <h2>Join Existing Group</h2>
+            <p>Explore and join existing groups to connect with like-minded members.</p>
+            <a href="joingroup.html" class="dashboard-button">Join Group</a>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 RoboSync. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

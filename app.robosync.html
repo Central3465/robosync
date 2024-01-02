@@ -90,18 +90,44 @@
 <body>
 
     <div class="login-container">
-        <h1>Bonjour!</h1>
+        <h1>Bonjour</h1>
         <p>Create an account to continue</p>
-        <button class="discord-button" onclick="discordLogin()">Login with Discord</button>
+        <button class="discord-button" onclick="redirectToDiscord()">Continue with Discord</button>
     </div>
 
     <script>
-        function discordLogin() {
-            // Implement Discord OAuth 2 logic here
+        function redirectToDiscord() {
+            // Replace with your Discord application's client ID and redirect URI
+            const clientId = '1191778217594454046';
+            const redirectUri = 'https://central3465.github.io/robosync/app.robosync.html';
+            
+            // Construct Discord OAuth 2 URL
+            const oauthUrl = `https://discord.com/oauth2/authorize?client_id=${clientId}&redirect_uri=${encodeURIComponent(redirectUri)}&response_type=code&scope=identify`;
+
             // Redirect the user to Discord authorization URL
-            // For example: window.location.href = 'https://discord.com/oauth2/authorize?client_id=YOUR_CLIENT_ID&redirect_uri=YOUR_REDIRECT_URI&response_type=code&scope=identify';
-            alert("Discord OAuth2 is currently unavailable.");
+            window.location.href = oauthUrl;
         }
     </script>
+
+     <script>
+        // Simulated server-side logic to handle the callback
+        const urlParams = new URLSearchParams(window.location.search);
+        const code = urlParams.get('code');
+
+        if (code) {
+            // Simulated server-side processing (exchange code for access token)
+            // This is where you would make a server-side request to exchange the code for an access token.
+            // For the sake of this example, we'll simulate a successful authorization.
+            const authorized = true;
+
+            if (authorized) {
+                // Redirect the user to another page
+                window.location.href = 'organisations.html';
+            } else {
+                alert('Authorization failed. Please try again.');
+            }
+        }
+    </script>
+
 </body>
 </html>
