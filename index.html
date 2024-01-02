@@ -26,15 +26,20 @@
 
         .dashboard-button {
             position: absolute;
-            top: 10px;
-            right: 10px;
+            top: 20px; /* Increased distance from the top */
+            right: 20px; /* Increased distance from the right */
             background-color: red;
             color: white;
-            padding: 8px 12px;
+            padding: 16px 25px; /* Increased padding for the button */
             border: none;
             border-radius: 5px;
             cursor: pointer;
             text-decoration: none;
+        }
+
+
+        .dashboard-button:hover {
+            background-color: #b34545;
         }
 
         nav {
@@ -80,7 +85,7 @@
 
     <header>
         <h1>RoboSync</h1>
-        <a href="#" class="dashboard-button">Dashboard</a>
+        <a href="app.robosync.html" class="dashboard-button">Dashboard</a>
     </header>
     
     <nav>

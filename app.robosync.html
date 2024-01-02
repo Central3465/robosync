@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoboSync - Login</title>
+    <link rel="icon" type="image/x-icon" href="https://cdn.discordapp.com/attachments/1191805915314270218/1191812716290121893/RS.jpeg?ex=65a6cd16&is=65945816&hm=5c98f3ea9ada451e5996dded67a0209a558abf9f8eeca814ca872691ad80fe37&">
+    <style>
+        body {
+            background-color: Black;
+            color: #f04d4d;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-weight: bold;
+            font-size: 15px;
+        }
+
+        .login-container {
+            background-color: #2a2a2a;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+            padding: 15px; /* Increased padding for the container */
+            width: 350px; /* Increased width of the container */
+            text-align: center;
+            font-size: 20px;
+        }
+
+        .login-container h1 {
+            color: #ff4d4d;
+            font-size: 30px;
+        }
+
+        .login-form {
+            margin-top: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #ff4d4d;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px; /* Increased padding for input fields */
+            box-sizing: border-box;
+            border: 1px solid #555;
+            border-radius: 4px;
+        }
+
+        .form-group input[type="submit"] {
+            background-color: #ff4d4d;
+            color: white;
+            cursor: pointer;
+            padding: 12px; /* Increased padding for the submit button */
+        }
+
+        .form-group input[type="submit"]:hover {
+            background-color: #e63c3c;
+        }
+
+        .discord-button {
+            background-color: #7289DA;
+            color: white;
+            padding: 15px 100px; /* Increased padding for the Discord button */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .discord-button:hover {
+            background-color: #677bc4;
+        }
+
+        .logo {
+            max-width: 150px; /* Adjusted max-width of the logo */
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <h1>Bonjour!</h1>
+        <p>Create an account to continue</p>
+        <button class="discord-button" onclick="discordLogin()">Login with Discord</button>
+    </div>
+
+    <script>
+        function discordLogin() {
+            // Implement Discord OAuth 2 logic here
+            // Redirect the user to Discord authorization URL
+            // For example: window.location.href = 'https://discord.com/oauth2/authorize?client_id=YOUR_CLIENT_ID&redirect_uri=YOUR_REDIRECT_URI&response_type=code&scope=identify';
+            alert("Discord OAuth2 is currently unavailable.");
+        }
+    </script>
+</body>
+</html>
