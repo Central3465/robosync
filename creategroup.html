@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Group - RoboSync</title>
+    <link rel="icon" type="image/x-icon" href="https://cdn.discordapp.com/attachments/1191805915314270218/1191812716290121893/RS.jpeg?ex=65a6cd16&is=65945816&hm=5c98f3ea9ada451e5996dded67a0209a558abf9f8eeca814ca872691ad80fe37&">
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        form {
+            background-color: #333; /* dark red */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            max-width: 400px;
+            width: 100%;
+            font-weight: bold;
+            color: red;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: red;
+            font-size: 18px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #555; /* darker red */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #777; /* even darker red */
+        }
+    </style>
+</head>
+
+<body>
+    <form action="groupconfirm.html">
+    <h2>Create Your Group</h2>
+    <label for="robloxLink">Roblox Group Link:</label>
+    <input type="text" id="robloxLink" name="robloxLink" placeholder="Paste your Roblox group link here" required pattern="https:\/\/www\.roblox\.com\/groups\/[0-9]+\/[\w-]+">
+    <button type="submit">Create Group</button>
+</form>
+
+</body>
+
+</html>
