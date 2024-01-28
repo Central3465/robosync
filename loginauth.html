@@ -64,12 +64,12 @@
 <body>
 
     <div class="card">
-        <h2>Hey! What account do you use?</h2>
+        <h2>Hey, What account do you use?</h2>
 
         <div class="roblox-link">
             <label for="robloxAccount">Roblox Account:</label>
             <input type="text" id="robloxAccount" name="robloxAccount" placeholder="Enter your Roblox username" required>
-            <hr>
+            <br>
             <a href="organisations.html">
                 <button type="submit">Link Account</button>
             </a>
@@ -82,7 +82,7 @@
 
             // Simulate creating user account and storing in localStorage
             const userAccount = {
-                discordUsername: /* Replace with actual Discord username retrieval logic */,
+                discordUsername: /* Replace with actual Discord username retrieval logic */
                 robloxUsername,
             };
 
@@ -93,13 +93,12 @@
         }
 
         // For illustration purposes, replace this with your actual Discord username retrieval logic
-        const discordUsername = /* Replace with actual Discord username retrieval logic */;
+        const discordUsername = get.discordUsername
         document.getElementById('discordUsernamePlaceholder').innerText = discordUsername;
     </script>
 
     <script>
         // Retrieve and set the actual Discord username dynamically
-        const discordUsername = "Central3465";
         document.getElementById('discordUsernamePlaceholder').innerText = discordUsername;
     </script>
 
@@ -124,7 +123,6 @@
         }
 
         // For illustration purposes, replace this with your actual Discord username retrieval logic
-        const discordUsername = "Central3465";
         document.getElementById('discordUsernamePlaceholder').innerText = discordUsername;
     </script>
 
@@ -136,7 +134,7 @@
         // Handle OAuth callback
         app.get('/oauth-callback', (req, res) => {
             // Replace this with your logic to fetch the actual Discord username based on the access token
-            const discordUsername = /* Logic to fetch Discord username based on access token */;
+            const discordUsername = get.discordUsername()
             
             // Render the loginauth.html with the actual Discord username
             res.sendFile(__dirname + '/loginauth.html', { discordUsername });
@@ -145,6 +143,24 @@
         app.listen(port, () => {
             console.log(`Server is running at http://localhost:${port}`);
         });
+    </script>
+
+    <script>
+        //check if user logged in
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "http://127.0.0.1:80/api/v1/users/@me", true);
+        xhr.onload = function () {
+          if (xhr.status == 401) {
+              window.location.href = 'https://discordapp.com/oauth2/authorize?client_id=CLIENTID&response_type=code&redirect_url'
+            window.location.href = "app.robosync.html";
+          } else if (xhr.responseURL === "http://127.0.0.1:80/api/v1/users/null") {
+            window.location.href = "loginauth.html"
+          } else {
+            window.location.reload();
+          }
+        };
+        xhr.setRequestHeader("Authorization", localStorage.getItem("token"));
+        xhr.send();
     </script>
 </body>
 </html>
