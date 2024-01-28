@@ -74,10 +74,27 @@
             border: none;
             border-radius: 5px;
             cursor: not-allowed;
+            position: relative;
         }
 
         .discord-button:hover {
             background-color: #286bde;
+        }
+
+        .roblox-button {
+            background-color: grey;
+            color: white;
+            padding: 15px 100px; /* Increased padding for the Discord button */
+            border: none;
+            border-radius: 5px;
+            cursor: not-allowed;
+            position: relative;
+            bottom: 5px;
+            top: 5px;
+        }
+
+        .roblox-button:hover {
+            background-color: darkgrey;
         }
 
         .logo {
@@ -92,8 +109,10 @@
         <h1>Bonjour</h1>
         <p>Create an account to continue</p>
         <button class="discord-button" onclick="redirectToDiscord()" disabled><b>Continue with Discord</b></button>
+        <br>
+        <button class="roblox-button" onclick="redirectToRoblox()" disabled><b>Continue with Roblox</b></button>
     </div>
-
+    
     <script>
         async function getDiscordUser(accessToken) {
            const response = await fetch('https://discord.com/api/v10/users/@me', {
